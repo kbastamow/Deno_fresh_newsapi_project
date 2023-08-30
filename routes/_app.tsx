@@ -6,7 +6,9 @@ export default function App({ Component }: AppProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>fresh_news</title>
+        <link rel="stylesheet" href="/app.css" />
+
+        <title>fresh_news_app</title>
       </head>
       <body>
         <Component />

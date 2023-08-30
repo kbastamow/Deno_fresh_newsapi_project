@@ -30,13 +30,13 @@ export const handler: Handlers = {
 export default function News({ data }: PageProps<NewsData>) {
   return (
     <>
-    <div class="my-font container">
+    <div class="container">
       <div class="display flex my-8 mx-40 items-center">
           <div>
           <img class="h-40"src="/news.jpg"></img>
           </div>
           <div class="text-center text-2xl flex-grow">
-          <h1 class="text-3xl my-auto">Get the latest news!</h1>
+          <h1 class="title-font text-3xl my-auto">Get the latest news!</h1>
           </div>
       </div>
       <Countries></Countries>
