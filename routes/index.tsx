@@ -1,6 +1,5 @@
 import { Handlers, PageProps } from "https://deno.land/x/fresh@1.4.2/server.ts";
 import TopHeadlines from "../components/TopHeadlines.tsx";
-import { useState } from "preact/hooks";
 import { NewsData } from "../types/newsData.ts";
 import Countries from "../islands/Countries.tsx";
 
@@ -31,14 +30,22 @@ export const handler: Handlers = {
 export default function News({ data }: PageProps<NewsData>) {
   return (
     <>
-      <img src="/news.jpg"></img>
-      <h1>Get the latest news!</h1>
+    <div class="my-font container">
+      <div class="display flex my-8 mx-40 items-center">
+          <div>
+          <img class="h-40"src="/news.jpg"></img>
+          </div>
+          <div class="text-center text-2xl flex-grow">
+          <h1 class="text-3xl my-auto">Get the latest news!</h1>
+          </div>
+      </div>
       <Countries></Countries>
       {(!data) ? <p>No news</p> : (
         <>
           <TopHeadlines data={data}></TopHeadlines>
         </>
       )}
+      </div>
     </>
   );
 }
